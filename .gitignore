@@ -30,6 +30,7 @@ jspm_packages/
 # Ignore build
 build
 dist
+.next
 
 .DS_Store
 

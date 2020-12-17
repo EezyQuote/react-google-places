@@ -1,7 +1,0 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/utility-functions/geocode-by-address": "pages/utility-functions/geocode-by-address.js",
-  "/utility-functions/get-latitude-and-longitude": "pages/utility-functions/get-latitude-and-longitude.js"
-}

@@ -1,6 +1,6 @@
 {
   "name": "@eezyquote/react-google-places",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -20,30 +20,15 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "postinstall": "cd docs && yarn"
+    "postinstall": "cd docs && yarn",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "react": ">=16"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint",
-      "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
-    }
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "subject-case": [
-        2,
-        "never",
-        [
-          "start-case",
-          "pascal-case"
-        ]
-      ]
+      "pre-commit": "tsdx lint"
     }
   },
   "prettier": {
@@ -68,6 +53,11 @@
     "@babel/core": "^7.12.10",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/npm": "^7.0.9",
+    "@semantic-release/release-notes-generator": "^9.0.1",
     "@size-limit/preset-small-lib": "^4.9.1",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
@@ -83,6 +73,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
+    "semantic-release": "^17.3.0",
     "size-limit": "^4.9.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.0.3",
@@ -92,5 +83,9 @@
     "@types/googlemaps": "^3.40.5",
     "react-select": "^3.1.1",
     "use-debounce": "^5.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EezyQuote/react-google-places.git"
   }
 }

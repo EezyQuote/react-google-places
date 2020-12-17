@@ -1,0 +1,103 @@
+{
+  "name": "@eezyquote/react-google-places",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "docs": "cd docs && yarn dev",
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepareasd": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "postinstall": "cd docs && yarn"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint",
+      "commit-msg": "commitlint -E  HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "subject-case": [
+        2,
+        "never",
+        [
+          "start-case",
+          "pascal-case"
+        ]
+      ]
+    }
+  },
+  "prettier": {
+    "printWidth": 140,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "author": "Paul van Dyk",
+  "module": "dist/react-google-places.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/react-google-places.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-google-places.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@size-limit/preset-small-lib": "^4.9.1",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/addons": "^6.1.11",
+    "@storybook/react": "^6.1.11",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-select": "^3.0.28",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.15.0",
+    "eslint-plugin-react": "^7.21.5",
+    "husky": "^4.3.6",
+    "next": "^10.0.3",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-is": "^17.0.1",
+    "size-limit": "^4.9.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "@types/googlemaps": "^3.40.5",
+    "react-select": "^3.1.1",
+    "use-debounce": "^5.2.0"
+  }
+}
